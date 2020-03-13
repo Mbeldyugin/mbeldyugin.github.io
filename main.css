@@ -344,7 +344,8 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-family: false;
+  font-size: 14px;
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -502,6 +503,9 @@ img {
 }
 
 .menu__link {
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 500;
+  opacity: 0.8;
   margin-left: 13px;
   text-decoration: none;
   text-transform: uppercase;
@@ -546,6 +550,8 @@ img {
   display: inline-block;
   padding: 10px 15px;
   margin-left: 15px;
+  font-family: "Ubuntu", Helvetica, sans-serif;
+  font-weight: 500;
 }
 
 .scroll-down {
@@ -575,6 +581,10 @@ img {
 .feature__img {
   display: flex;
   justify-content: center;
+}
+
+.feature__text {
+  color: #2f3234;
 }
 
 .reviews {
@@ -657,4 +667,50 @@ img {
   padding: 8px 21px;
   border: none;
   border-radius: 4px;
+}
+
+.pointmenu {
+  position: fixed;
+  top: 200px;
+  right: 40px;
+}
+
+.pointmenu__item {
+  margin-bottom: 5px;
+}
+
+.pointmenu__link {
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+}
+.pointmenu__link:before {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+.pointmenu__link:after {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+}
+
+.pointmenu__link:after, .pointmenu__link:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.pointmenu__link:hover:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
 }

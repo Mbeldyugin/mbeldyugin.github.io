@@ -26,6 +26,8 @@ $itemsMargin: 13px;
 }
 
 .menu__link {
+    @include ubuntu(medium);
+    opacity: 0.8;
     margin-left: $itemsMargin;
     text-decoration: none;
     text-transform: uppercase;
